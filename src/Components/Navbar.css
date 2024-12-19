@@ -1,0 +1,122 @@
+/* Main Container */
+.main-container {
+  position: relative;
+  height: 90vh; /* Full viewport height */
+  background-image: url('../images/young-woman-black-hat-red-260nw-607184771.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: cursive;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-family: cursive;
+}
+
+.logo {
+  font-family: cursive;
+  font-size: 5.5rem;
+  font-weight: bold;
+  margin-left: 20px;
+  color:lavender;
+}
+
+.nav-links {
+  margin-top: -20px;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6347; /* Hover effect */
+}
+
+/* Mobile Menu */
+.menu-button {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.bar.change:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.bar.change:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.change:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* Content Section */
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent background */
+    padding: 10px 20px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-button {
+    display: flex;
+  }
+}

@@ -1,0 +1,88 @@
+/* General styles for the Contact section */
+.contact-section {
+  background-color: black;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-family: cursive;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.contact-description {
+  font-size: 1.2rem;
+  font-family: cursive;
+  color: plum;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 5 20px;
+  color: white;
+}
+
+.form-input, .form-textarea {
+  background-color: black;
+  color: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px 15px;
+  border: 1px solid plum;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-family: cursive;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  color: plum;
+  background-color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: cursive;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  color: white;
+  background-color: plum;
+  
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-description {
+    font-size: 1rem;
+  }
+
+  .form-input, .form-textarea {
+    font-size: 0.9rem;
+  }
+}
